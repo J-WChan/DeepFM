@@ -2,7 +2,7 @@ from data import load,postprocess,preprocess
 from model import deepfm
 
 
-def process(file_path,output_path,drop_column,sparse_column,dense_column,target_column) :
+def process_1(file_path,output_path,drop_column,sparse_column,dense_column,target_column) :
 
     df = load.load_df(file_path)
 
@@ -17,3 +17,5 @@ def process(file_path,output_path,drop_column,sparse_column,dense_column,target_
     pred_ans = model.pred()
 
     postprocess.postprocessor(df,df_1,target_column,pred_ans,output_path)
+    model.save_model("./deepFM_model.h5")
+    

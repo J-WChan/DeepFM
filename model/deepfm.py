@@ -1,5 +1,5 @@
 from deepctr.models.deepfm import DeepFM
-
+from tensorflow import keras
 
 class Deepfm :
 
@@ -25,3 +25,6 @@ class Deepfm :
         print('pred')
         pred_ans = self.model.predict(self.test_model_input, batch_size=256)
         return pred_ans
+    
+    def save_model(self, path):
+        self.model.save(path)
