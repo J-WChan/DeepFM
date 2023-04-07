@@ -17,6 +17,3 @@ def process(file_path,output_path,drop_column,sparse_column,dense_column,target_
     pred_ans = model.pred()
 
     postprocess.postprocessor(df,df_1,target_column,pred_ans,output_path)
-
-
-
