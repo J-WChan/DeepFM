@@ -1,0 +1,14 @@
+Deepfm
+|
+|-- main.py #실행할 파일
+|
+|-- data
+| |-- __init__.py 
+| |-- load.py # 파일 불러오기
+| |-- preprocess.py # 전처리
+| |-- postprocess.py # 예측치 저장, 파일 내보내기
+| 
+|
+|-- model
+  |-- __init__.py
+  |-- deemfm.py # 모델
